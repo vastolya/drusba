@@ -1,63 +1,77 @@
-import React from "react";
 import ClownsImg from "../../public/pics/clowns.png";
 import CircleImg from "../../public/pics/circles.png";
 import HemisphereImg from "../../public/pics/hemisphere.png";
 import SmallStarImg from "../../public/pics/small stars.png";
-import StarImg from "../../public/pics/star.png";
+import StarImg from "../../public/pics/star.svg";
+import MobileClownsImg from "../../public/pics/mobile_clown.svg";
+
 import Image from "next/image";
 import localFont from "next/font/local";
 
 const nextArtFont = localFont({
   src: "../../public/fonts/NEXT_ART_Bold.otf",
 });
+const MontserratBold = localFont({
+  src: "../../public/fonts/Montserrat-Bold.ttf",
+});
 
 const Main = () => {
   return (
-    <div className="relative max-w-[1440px] mx-auto">
+    <div className="relative md:w-[75vw] mx-auto">
       <Image
         src={HemisphereImg}
         alt={"HemisphereImg"}
-        width={675}
-        height={813}
-        className="absolute top-[45px] left-[663px] scale-125 select-none"
+        width={1500}
+        height={1500}
+        className="absolute md:w-[35.15vw] md:h-[75.27vh] md:-top-[0vh] md:left-[25vw] select-none"
       ></Image>
 
       <Image
         src={CircleImg}
         alt={"CircleImg"}
-        width={675}
-        height={813}
-        className="absolute top-[9px] left-[743px] rotate-90 scale-125 select-none"
+        width={1500}
+        height={1500}
+        className="absolute md:w-[35.15vw] md:h-[75.27vh] -top-[24px] md:-top-[4vh] left-[10px] md:left-[27.69vw] rotate-90 select-none"
+      ></Image>
+
+      <Image
+        src={MobileClownsImg}
+        alt={"MobileClownsImg"}
+        width={1671}
+        height={1601}
+        className=" md:hidden w-[315px] h-[252px] left-8 top-[80px] absolute  select-none"
       ></Image>
 
       <Image
         src={ClownsImg}
         alt={"ClownsImg"}
-        width={671}
-        height={601}
-        className="absolute top-[25px] left-[813px] select-none"
+        width={1671}
+        height={1601}
+        className="hidden md:block absolute md:w-[34.94vw] md:h-[55.64vh] md:top-[2.31vh] md:left-[31vw] select-none"
       ></Image>
 
       <Image
         src={SmallStarImg}
         alt={"SmallStarImg"}
-        width={38}
-        height={40}
-        className="absolute top-[645px] left-[1303px] select-none"
+        width={100}
+        height={100}
+        className="hidden md:block absolute md:w-[1.97vw] md:h-[3.7vh] md:top-[62.72vh] left-[55.86vw] select-none"
       ></Image>
 
       <Image
         src={StarImg}
         alt={"StarImg"}
-        width={1714}
-        height={1676}
-        className="absolute top-[808px] left-[941px] scale-150 select-none"
+        width={3714}
+        height={3676}
+        className="hidden md:block absolute md:w-[89.27vw] md:h-[155.1vh] md:top-[49.81vh] md:left-[8.42vw] select-none"
       ></Image>
 
       <div className={nextArtFont.className}>
-        <div className="pt-[246px] pl-[8px] z-[100] absolute font-bold">
-          <h1 className="text-[98px] leading-[111px]">ДРУСБА</h1>
-          <h2 className="text-[26px] leading-[30px] bg-[#F6CA46] w-full text-center">
+        <div className="pl-[56px] md:pl-0 pt-[362px] md:pt-[22.96vh] z-[99] absolute font-bold">
+          <h1 className="text-[62px] md:text-[9.07vh] leading-[70px] md:leading-[10.27vh]">
+            ДРУСБА
+          </h1>
+          <h2 className="text-base md:text-[2.40vh] leading-[18px] md:leading-[2.77vh] bg-[#F6CA46] w-full text-center">
             СЛУЖБА ДОСТАВКИ АБСУРДА
           </h2>
         </div>
