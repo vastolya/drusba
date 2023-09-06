@@ -17,13 +17,13 @@ const MontserratBold = localFont({
 
 const Main = () => {
   return (
-    <div className="relative md:w-[75vw] mx-auto">
+    <div className="relative md:w-[75vw] mx-auto pt-[2vh]">
       <Image
         src={HemisphereImg}
         alt={"HemisphereImg"}
         width={1500}
         height={1500}
-        className="absolute md:w-[35.15vw] md:h-[75.27vh] md:-top-[0vh] md:left-[25vw] select-none"
+        className="absolute md:w-[35.15vw] md:h-[75.27vh] md:-top-[0vh] md:left-[25vw] select-none z-0 md:z-[101]"
       ></Image>
 
       <Image
@@ -31,7 +31,7 @@ const Main = () => {
         alt={"CircleImg"}
         width={1500}
         height={1500}
-        className="absolute md:w-[35.15vw] md:h-[75.27vh] -top-[24px] md:-top-[4vh] left-[10px] md:left-[27.69vw] rotate-90 select-none"
+        className="absolute md:w-[35.15vw] md:h-[75.27vh] -top-[24px] md:-top-[4vh] left-[10px] md:left-[27.69vw] rotate-90 select-none z-0 md:z-[101]"
       ></Image>
 
       <Image
@@ -39,7 +39,7 @@ const Main = () => {
         alt={"MobileClownsImg"}
         width={1671}
         height={1601}
-        className=" md:hidden w-[315px] h-[252px] left-8 top-[80px] absolute  select-none"
+        className=" md:hidden w-[315px] h-[252px] left-8 top-[80px] absolute  select-none z-0 md:z-[101]"
       ></Image>
 
       <Image
@@ -47,7 +47,7 @@ const Main = () => {
         alt={"ClownsImg"}
         width={1671}
         height={1601}
-        className="hidden md:block absolute md:w-[34.94vw] md:h-[55.64vh] md:top-[2.31vh] md:left-[31vw] select-none"
+        className="hidden md:block absolute md:w-[34.94vw] md:h-[55.64vh] md:top-[2.31vh] md:left-[31vw] select-none z-0 md:z-[101]"
       ></Image>
 
       <Image
@@ -55,7 +55,7 @@ const Main = () => {
         alt={"SmallStarImg"}
         width={100}
         height={100}
-        className="hidden md:block absolute md:w-[1.97vw] md:h-[3.7vh] md:top-[62.72vh] left-[55.86vw] select-none"
+        className="hidden md:block absolute md:w-[1.97vw] md:h-[3.7vh] md:top-[62.72vh] left-[55.86vw] select-none z-0 md:z-[101]"
       ></Image>
 
       <Image
