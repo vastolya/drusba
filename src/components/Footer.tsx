@@ -22,7 +22,7 @@ const Footer = () => {
             className="md:w-[5.88vw] md:h-[21.38vh] my-[6.66vh]"
           />
         </div>
-        <div className="md:mx-[6.25vw] hidden md:block">
+        <div className="hidden md:block">
           <h1 className={MontserratRegular.className}>
             <p className="md:mt-[8vh]">DRUSBA DELIVERY</p>
             <p className="md:mt-[1.48vh]">
@@ -43,7 +43,7 @@ const Footer = () => {
           </h1>{" "}
         </div>
 
-        <div className="md:mx-[6.25vw] my-4 md:my-0 px-4 md:px-0">
+        <div className="my-4 md:my-0 px-4 md:px-0">
           <p className="md:mt-[8vh] hidden md:block">drusbastore@gmail.com</p>
 
           <p className="md:mt-[1.48vh] hidden md:block">
