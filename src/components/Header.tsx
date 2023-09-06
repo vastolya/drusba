@@ -31,7 +31,7 @@ export const Header = () => {
       }`}
     >
       <header className={MontserratExtraBold.className}>
-        <div className="mx-[24px] py-5 md:py-[1.85vh] md:w-[75vw] md:mx-auto flex justify-between items-center bg-white">
+        <div className="mx-[24px] py-5 md:py-[1.85vh] md:w-[75vw] md:mx-auto flex justify-between items-center bg-white md:bg-none">
           <h2 className=" text-2xl md:text-[5.37vh] md:leading-[9.72vh] ">
             ДРУСБА
           </h2>
