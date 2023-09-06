@@ -49,51 +49,50 @@ export default function Home({ products }: HomeProps) {
   return (
     <main className="w-full mx-auto overflow-hidden">
       <Header />
-      <Main />
 
-      <div className={MontserratBold.className}>
-        <h2 className="pt-[659px] text-center text-[45px] leading-[68px]">
-          ДОСТАВКА АБСУРДА: РАССКРЫВАЯ ПУТЬ
-          <br /> ИСКУССТВА ЧЕРЕЗ СЛОИ ИСПЫТАНИЙ
-        </h2>
+      <div className="md:mx-[18.75vw] mt-12 md:mt-0">
+        <Main />
       </div>
-      <div className="w-[1440px] mx-auto flex">
-        <Image
-          src={GlobeImg}
-          alt={"GlobeImg"}
-          width={319}
-          height={0}
-          className="ml-[88px] h-[484px] select-none"
-        ></Image>
-        <div className={MontserratRegular.className}>
-          <h2 className="ml-[33px] mt-[32px] text-[30px] leading-[54px] relative z-50">
-            Добро пожаловать в мир «Службы Доставки Абсурда»!
-            <br />
-            Мы специализируемся на доставке современного
-            <br />
-            искусства между Россией и Западом. Наши товары -<br />
-            уникальные произведения, адресованные
-            <br />
-            знаменитостям, но не дошедшие до них по разным
-            <br />
-            причинам. Они вернулись на наш склад и готовы
-            <br />
-            покорить вас своей ценностью, созданной через
-            <br />
-            сложные пути доставки. Получите искусство абсурда
-            <br />
-            прямо сейчас по невероятным ценам!
+
+      <div className=" md:mt-[2.11vh] mx-6 md:mx-[18.75vw]">
+        <div className={MontserratBold.className}>
+          <h2 className=" text-center pt-[500px] md:pt-[61.11vh] text-2xl leading-[38px] md:text-[4.16vh] md:leading-[6.29vh]">
+            ДОСТАВКА АБСУРДА: РАССКРЫВАЯ ПУТЬ
+            <br /> ИСКУССТВА ЧЕРЕЗ СЛОИ ИСПЫТАНИЙ
           </h2>
         </div>
       </div>
 
-      <div className="mx-4 mt-[120px] md:my-[11.11vh] md:mx-[18.75vw]">
+      <div className=" md:my-[5.55vh] mx-6 md:mx-[18.75vw]">
+        <div className="flex w-full">
+          <Image
+            src={GlobeImg}
+            alt={"GlobeImg"}
+            width={1000}
+            height={1000}
+            className="hidden md:block md:w-[16.61vw] md:h-[44.81vh] select-none object-cover"
+          ></Image>
+          <div className="">
+            <div className="pt-9 md:pt-0 ml-[1.66vw] md:mt-[3.4vh] text-[16px] md:text-[2.77vh]  leading-7 md:leading-[5vh] relative z-50">
+              <p className={MontserratRegular.className}>
+                Добро пожаловать в мир «Службы Доставки Абсурда»! Мы
+                специализируемся на доставке современного искусства между
+                Россией и Западом. Наши товары - уникальные произведения,
+                адресованные знаменитостям, но не дошедшие до них по разным
+                причинам. Они вернулись на наш склад и готовы покорить вас своей
+                ценностью, созданной через сложные пути доставки. Получите
+                искусство абсурда прямо сейчас по невероятным ценам!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-4 mt-[40px] md:mt-[11.11vh] md:my-[11.11vh] md:mx-[18.75vw]">
         <ProductList products={products} />
       </div>
 
-      
-
-      <Footer/>
+      <Footer />
     </main>
   );
 }
