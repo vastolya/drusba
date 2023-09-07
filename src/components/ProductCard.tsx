@@ -16,7 +16,7 @@ const ProductCard = ({ product }:any ) => {
   const price = product.node.priceRange.minVariantPrice.amount;
 
   return (
-    <Link href={`/product/${handle}`} className="mx-auto z-[102]">
+    <Link href={`/product/${handle}`} className="mx-auto z-[100]">
       {/* <div className="w-[382px] h-[487px]  bg-[#FE6A3A] rounded-lg relative z-100 overflow-hidden"> */}
       <div className="w-full md:w-[19.89vw] min-h-[45.09vh] h-full bg-[#FE6A3A] rounded-lg relative z-100 overflow-hidden">
         <Image
