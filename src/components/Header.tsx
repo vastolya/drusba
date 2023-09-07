@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const MontserratExtraBold = localFont({
@@ -76,10 +77,10 @@ export const Header = () => {
       }`}
     >
       <header className={MontserratExtraBold.className}>
-        <div className="mx-[24px] py-5 md:py-[1.85vh] md:w-[75vw] md:mx-auto flex justify-between items-center">
-          <h2 className="text-2xl md:text-[5.37vh] md:leading-[9.72vh] ">
-            <a href="#top" onClick={scrollToTop}>ДРУСБА</a>
-          </h2>
+        <div className="mx-[24px] py-5 md:py-[1.85vh] md:w-[75vw] md:mx-auto flex justify-between items-center bg-white">
+          <Link href='\' className=" text-2xl md:text-[5.37vh] md:leading-[9.72vh] ">
+            ДРУСБА
+          </Link>
           <h2 className="hidden md:visible md:text-[2.22vh]">EN -- RU</h2>
         </div>
       </header>
