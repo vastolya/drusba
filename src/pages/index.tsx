@@ -8,6 +8,7 @@ import Main from "../components/Main";
 import ProductList from "@/components/ProductList";
 import GlobeImg from "../../public/pics/globe.png";
 import Footer from "@/components/Footer";
+import FeedbackForm from "@/components/FeedbackForm";
 
 const nextArtFont = localFont({ src: "../../public/fonts/NEXT_ART_Bold.otf" });
 const MontserratBold = localFont({
@@ -48,6 +49,7 @@ export default function Home({ products }: HomeProps) {
 
   return (
     <main className="w-full mx-auto overflow-hidden">
+      
       <Header />
 
       <div className="md:mx-[18.75vw] mt-12 md:mt-0">
@@ -90,6 +92,7 @@ export default function Home({ products }: HomeProps) {
 
       <div className="mx-4 mt-[40px] md:mt-[11.11vh] md:my-[11.11vh] md:mx-[18.75vw]">
         <ProductList products={products} />
+        <FeedbackForm />
       </div>
 
       <Footer />
