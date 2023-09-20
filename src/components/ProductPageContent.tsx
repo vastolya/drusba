@@ -20,7 +20,7 @@ const MontserratBold = localFont({
 const MontserratExtraBold = localFont({
   src: "../../public/fonts/Montserrat-ExtraBold.ttf",
 });
-export default function ProductPageContent({ product }) {
+export default function ProductPageContent({ product}: any) {
   const price = product.variants.edges[0].node.priceV2.amount;
   const name = product.description.slice(
     product.description.indexOf("@") + 1,
