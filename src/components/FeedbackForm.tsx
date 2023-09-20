@@ -54,17 +54,17 @@ const FeedbackForm = () => {
     <div className="md:grid md:grid-cols-2 my-8 md:my-[11.11vh]">
       <form
         onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
-        className="border border-[#FE6A3A] rounded-lg"
+        className="border border-[#FE6A3A] rounded-2xl"
       >
         <div className="flex items-center justify-center">
           <h2
-            className={`${MontserratBold.className}  text-2xl md:text-[2.22vh] justify-center mx:auto my-10 text-center md:pt-[7.77vh] md:pb-[6.66vh]`}
+            className={`${MontserratBold.className}  text-2xl md:text-[2.22vh] justify-center mx:auto my-10 md:my-[3.7vh] text-center md:pt-[7.77vh] md:pb-[6.66vh]`}
           >
             Отправьте нам сообщение
           </h2>
         </div>
-        <div className="mx-10 mb-10 md:mx-[5vw] flex items-center border-b md:mb-[4.44vh] md:pb-[1.11vh]">
-          <label className={`${MontserratBold.className} `}>Имя</label>
+        <div className="mx-10 md:mx-[5vw] mb-10 md:mb-[4.44vh] flex items-center border-b">
+          <label className={`${MontserratBold.className} md:text-[2.22vh] `}>Имя</label>
           <input
             ref={nameRef}
             value={inputValue}
@@ -72,11 +72,11 @@ const FeedbackForm = () => {
             type="text"
             id="name"
             placeholder=""
-            className={`${MontserratRegular.className} rounded-md px-2 md:px-[0.4vw] focus:outline-none focus:border-[#FE6A3A] w-full`}
+            className={`${MontserratRegular.className} md:text-[2.22vh] rounded-2xl px-2 md:px-[0.4vw] focus:outline-none focus:border-[#FE6A3A] w-full`}
           />
         </div>
-        <div className="mx-10 my-10 md:my-0 md:mx-[5vw] flex items-center border-b md:mb-[4.44vh] md:pb-[1.11vh]">
-          <label className={`${MontserratBold.className} `}>Почта</label>
+        <div className="mx-10 md:mx-[5vw] my-10 md:my-0 md:mb-[4.44vh] flex items-center border-b">
+          <label className={`${MontserratBold.className} md:text-[2.22vh]`}>Почта</label>
           <input
             ref={emailRef}
             value={inputEmail}
@@ -85,23 +85,23 @@ const FeedbackForm = () => {
             id="email"
             required
             placeholder=""
-            className={`${MontserratRegular.className} rounded-md md:px-[0.4vw]  focus:outline-none focus:border-[#FE6A3A] w-full`}
+            className={`${MontserratRegular.className} md:text-[2.22vh] rounded-2xl px-2 md:px-[0.4vw]  focus:outline-none focus:border-[#FE6A3A] w-full`}
           />
         </div>
-        <div className="mx-10 my-10 md:my-0 md:mb-[4.44vh] border md:mx-[3.33vw] rounded-lg md:pb-[1.11vh]">
+        <div className="mx-10 md:mx-[3.33vw] md:pb-[1.11vh] my-10 md:my-0 md:mb-[4.44vh] border rounded-2xl">
           <input
             ref={messageRef}
             value={inputTextarea}
             onChange={(e) => setTextareaValue(e.target.value)}
             id="message"
             placeholder="Вот и ваше сообщение..."
-            className={`${MontserratRegular.className} rounded-md  focus:outline-none w-full my-4 md:my-[2.03vh] px-4 md:px-[1.16vw] `}
+            className={`${MontserratRegular.className}  my-4 md:my-[2.03vh] px-4 md:px-[1.16vw] md:text-[2.22vh] rounded-2xl focus:outline-none w-full `}
           />
         </div>
-        <div className="mx-10 my-10 md:my-0 md:mx-[3.33vw] md:mb-[7.77vh]">
+        <div className="mx-10 md:mx-[3.33vw] my-10 md:my-0 md:mb-[7.77vh]">
           <button
             type="submit"
-            className={`${MontserratBold.className} py-3 md:py-[2.03vh] bg-[#FE6A3A] rounded-lg w-full text-white`}
+            className={`${MontserratBold.className} text-[22px] md:text-[2.22vh] py-3 md:py-[2.03vh] bg-[#FE6A3A] rounded-2xl w-full text-white`}
           >
             Отправить
           </button>

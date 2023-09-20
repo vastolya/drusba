@@ -45,18 +45,15 @@ interface HomeProps {
 }
 
 export default function Home({ products }: HomeProps) {
-  console.log(products);
 
   return (
     <main className="w-full mx-auto overflow-hidden">
-      
-      <Header />
 
       <div className="md:mx-[18.75vw] mt-12 md:mt-0">
         <Main />
       </div>
 
-      <div className=" md:mt-[2.11vh] mx-6 md:mx-[18.75vw]">
+      <div className=" md:mt-[12.11vh] mx-6 md:mx-[18.75vw]">
         <div className={MontserratBold.className}>
           <h2 className=" text-center pt-[500px] md:pt-[61.11vh] text-2xl leading-[38px] md:text-[4.16vh] md:leading-[6.29vh]">
             ДОСТАВКА АБСУРДА: РАССКРЫВАЯ ПУТЬ
@@ -91,11 +88,9 @@ export default function Home({ products }: HomeProps) {
       </div>
 
       <div className="mx-4 mt-[40px] md:mt-[11.11vh] md:my-[11.11vh] md:mx-[18.75vw]">
-        <ProductList products={products} />
+        <ProductList products={products} className=''/>
         <FeedbackForm />
       </div>
-
-      <Footer />
     </main>
   );
 }
