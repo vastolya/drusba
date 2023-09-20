@@ -33,7 +33,7 @@ export async function getProductsInCollection() {
   {
     collectionByHandle(handle: "rus") {
      title
-     products(first: 10) {
+     products(first: 100) {
        edges {
          node{
            id
@@ -45,7 +45,7 @@ export async function getProductsInCollection() {
               amount
             }
            }
-           images(first: 5) {
+           images(first: 100) {
              edges {
                node {
                  originalSrc
@@ -69,4 +69,77 @@ export async function getProductsInCollection() {
 
 
   return allProducts; 
+}
+
+export async function getAllProducts() {
+  const query = 
+  `{
+    products(first: 250) {
+      edges {
+        node {
+          handle
+          id
+        }
+      }
+    }
+  }
+  `;
+
+  const response = await ShopifyData(query);
+  const slugs = response.data.products.edges
+    ? response.data.products.edges
+    : [];
+
+  return slugs;
+}
+
+export async function getProduct(handle) {
+  const query = `
+  {
+    productByHandle(handle: "${handle}") {
+      id
+      title
+      handle
+      description
+      images(first: 100) {
+        edges {
+          node {
+            originalSrc
+            altText
+          }
+        }
+      }
+      options {
+        name
+        values
+        id
+      }
+      variants(first: 100) {
+        edges {
+          node {
+            selectedOptions {
+              name
+              value
+            }
+            image {
+              originalSrc
+              altText
+            }
+            title
+            id
+            priceV2 {
+              amount
+            }
+          }
+        }
+      }
+    }
+  }`
+
+  const response = await ShopifyData(query);
+  
+  const product = response.data.productByHandle
+    ? response.data.productByHandle
+    : [];
+  return product;
 }

@@ -11,8 +11,8 @@ const MontserratRegular = localFont({
 
 const Footer = () => {
   return (
-    <footer className="h-full md:h-[34.72vh] bg-[#3C3C43] relative z-100">
-      <div className="md:my-[11.11vh] md:mx-[18.75vw] md:gap-[1.45vw] grid grid-cols-3 md:text-[1.38vh] text-[#FFFFFF]">
+    <footer className="h-full md:h-[34.72vh] bg-[#3C3C43] relative z-100 ">
+      <div className="md:mx-[18.75vw] md:gap-[1.45vw] grid grid-cols-3 md:text-[1.38vh] text-[#FFFFFF]">
         <div className="md:mx-[6.25vw] hidden md:block">
           <Image
             src={footerGlobeImg}
