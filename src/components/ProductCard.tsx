@@ -18,15 +18,15 @@ const ProductCard = ({ product }:any ) => {
   
 
   return (
-    <Link href={`/products/${handle}`} className="mx-auto z-[100] w-full">
+    <Link href={`/products/${handle}`} className="mx-auto z-[100] w-full active:scale-[98%] active:delay-50 transition-all">
       {/* <div className="w-[382px] h-[487px]  bg-[#FE6A3A] rounded-lg relative z-100 overflow-hidden"> */}
-      <div className="min- md:w-[19.89vw] min-h-[45.09vh] h-full bg-[#FE6A3A] rounded-2xl relative z-100 overflow-hidden">
+      <div className="md:w-[19.89vw] md:h-[45.18vh] bg-[#FE6A3A] rounded-2xl relative z-100 overflow-hidden">
         <Image
           src={originalSrc}
           alt={altText}
           width={1000}
           height={1000}
-          className="h-[26.11vh] w-full object-cover"
+          className="md:h-[26.11vh] hover:h-full transition-all w-full object-cover"
           // "h-[282px] hover:h-full transition-all w-full object-cover"
         />
         <div className={MontserratBold.className}>
