@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 import ClownFormImg from "../../public/pics/form_conus.svg";
 import { RefObject, useRef, useState } from "react";
+import Modal from "./Modal";
 
 const MontserratBold = localFont({
   src: "../../public/fonts/Montserrat-Bold.ttf",
@@ -15,6 +16,8 @@ const FeedbackForm = () => {
   const [inputValue, setInputValue] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputTextarea, setTextareaValue] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState("");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -38,23 +41,34 @@ const FeedbackForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
-      }).then((res) => {
-        if (res.status === 200) {
-          console.log("status 200");
-          //;
-        }
-      });
-    } else {
-      console.log("invalid email");
+      })
+        //   .then((res) => {
+        //     if (res.status === 200) {
+        //       console.log("status 200");
+        //       //;
+        //     }
+        //   });
+        // } else {
+        //   console.log("invalid email");
+        .then((res) => {
+          if (res.status === 200) {
+            setModalContent("Сообщение успешно отправлено!");
+            setModalVisible(true);
+            // Очистите поля формы или установите другие значения по вашему усмотрению
+          } else {
+            setModalContent("Произошла ошибка при отправке сообщения.");
+            setModalVisible(true);
+          }
+        });
       //
     }
   };
 
   return (
-    <div className="md:grid md:grid-cols-2 my-8 md:my-[11.11vh]">
+    <div className="md:grid md:grid-cols-2 my-8 md:my-[11.11vh] ">
       <form
         onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
-        className="border border-[#FE6A3A] rounded-2xl"
+        className="border border-[#FE6A3A] rounded-2xl "
       >
         <div className="flex items-center justify-center">
           <h2
@@ -64,7 +78,9 @@ const FeedbackForm = () => {
           </h2>
         </div>
         <div className="mx-10 md:mx-[5vw] mb-10 md:mb-[4.44vh] flex items-center border-b">
-          <label className={`${MontserratBold.className} md:text-[2.22vh] `}>Имя</label>
+          <label className={`${MontserratBold.className} md:text-[2.22vh] `}>
+            Имя
+          </label>
           <input
             ref={nameRef}
             value={inputValue}
@@ -76,7 +92,9 @@ const FeedbackForm = () => {
           />
         </div>
         <div className="mx-10 md:mx-[5vw] my-10 md:my-0 md:mb-[4.44vh] flex items-center border-b">
-          <label className={`${MontserratBold.className} md:text-[2.22vh]`}>Почта</label>
+          <label className={`${MontserratBold.className} md:text-[2.22vh]`}>
+            Почта
+          </label>
           <input
             ref={emailRef}
             value={inputEmail}
@@ -101,20 +119,29 @@ const FeedbackForm = () => {
         <div className="mx-10 md:mx-[3.33vw] my-10 md:my-0 md:mb-[7.77vh]">
           <button
             type="submit"
-            className={`${MontserratBold.className} text-[22px] md:text-[2.22vh] py-3 md:py-[2.03vh] bg-[#FE6A3A] rounded-2xl w-full text-white`}
+            className={`${MontserratBold.className} text-[22px] md:text-[2.22vh] py-3 md:py-[2.03vh] bg-[#FE6A3A] rounded-2xl w-full text-white active:scale-[98%] active:delay-50 transition-all `}
           >
             Отправить
           </button>
         </div>
       </form>
-      <div className="ml-[2.62vw]  items-center hidden md:flex">
+
+      <div className="ml-[2.62vw] items-center md:flex justify-start relative">
         <Image
           src={ClownFormImg}
           alt="text"
           width={1000}
           height={1000}
-          className="md:w-[31.04vw] md:h-[43.33vh]"
+          className="md:w-[31.04vw] md:h-[43.33vh] hidden md:flex"
         />
+        <div className="absolute md:top-[0vh] -top-[220px] -right-[150px] md:-right-[16.66vw] md:flex -rotate-12">
+          <Modal
+            modalVisible={modalVisible}
+            modalContent={modalContent}
+            setModalVisible={setModalVisible}
+            className=""
+          />
+        </div>
       </div>
     </div>
   );
