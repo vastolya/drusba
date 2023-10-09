@@ -134,7 +134,7 @@ const FeedbackForm = () => {
           height={1000}
           className="md:w-[31.04vw] md:h-[43.33vh] hidden md:flex"
         />
-        <div className="absolute md:top-[0vh] -top-[220px] -right-[150px] md:-right-[16.66vw] md:flex -rotate-12">
+        <div className="absolute -rotate-12 -top-[220px] md:top-[0vh] -right-[150px] md:-right-[16.66vw]">
           <Modal
             modalVisible={modalVisible}
             modalContent={modalContent}

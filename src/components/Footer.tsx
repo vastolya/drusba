@@ -44,16 +44,12 @@ const Footer = () => {
         </div>
 
         <div className="my-4 md:my-0 px-4 md:px-0">
-          <p className="md:mt-[8vh] hidden md:block">drusbastore@gmail.com</p>
-
-          <p className="md:mt-[1.48vh] hidden md:block">
-            <a href="tel:+1234567890" className="md:mt-[1.48vh]">
-              +7 977 411 1938
-            </a>
+          <p className="md:mt-[8vh] hidden md:block">
+            <a href="mailto:drusbastore@gmail.com">drusbastore@gmail.com</a>
           </p>
 
           <div className="md:mt-[3.33vh] flex gap-2 md:gap-0">
-            <Link href="https://www.telegram.org/" target="_blank">
+            <Link href="https://t.me/drusba_drusba" target="_blank">
               <Image
                 src={telegramIconImg}
                 alt={"telegram"}
@@ -62,7 +58,7 @@ const Footer = () => {
                 className="md:w-[2.18vw] md:h-[3.88vh]"
               />
             </Link>
-            <Link href="https://www.instagram.com/" target="_blank">
+            <Link href="https://www.instagram.com/drusbadrusba" target="_blank">
               <Image
                 src={instaIconImg}
                 alt={"insta"}

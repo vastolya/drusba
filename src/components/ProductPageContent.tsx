@@ -20,7 +20,7 @@ const MontserratBold = localFont({
 const MontserratExtraBold = localFont({
   src: "../../public/fonts/Montserrat-ExtraBold.ttf",
 });
-export default function ProductPageContent({ product}: any) {
+export default function ProductPageContent({ product }: any) {
   const price = product.variants.edges[0].node.priceV2.amount;
   const name = product.description.slice(
     product.description.indexOf("@") + 1,
@@ -69,7 +69,7 @@ export default function ProductPageContent({ product}: any) {
           >{`${Math.round(price)} ₽`}</p>
 
           <button
-            className={`w-full md:w-[22.08vw] md:text-[3.88vh] md:leading-[5.74vh] bg-[#FE6A3A] text-white px-[24px] md:px-[1.45vw] py-[18px] md:py-[1.85vh] mb-2 md:mb-[2.03vh] rounded-2xl ${MontserratSemiBold.className}`}
+            className={`w-full md:w-[22.08vw] md:text-[3.88vh] md:leading-[5.74vh] bg-[#FE6A3A] text-white px-[24px] md:px-[1.45vw] py-[18px] md:py-[1.85vh] mb-2 md:mb-[2.03vh] rounded-2xl ${MontserratSemiBold.className} active:scale-[98%] active:delay-50 transition-all`}
             onClick={() => {
               if (feedbackFormRef.current) {
                 feedbackFormRef.current.scrollIntoView({ behavior: "smooth" });
@@ -80,7 +80,7 @@ export default function ProductPageContent({ product}: any) {
           </button>
 
           <Link
-            href={`#`}
+            href={`/recovery`}
             className={`text-base md:text-[2.59vh] underline ${MontserratSemiBold.className}`}
           >
             <p>{`Политика возврата абсурда`}</p>
